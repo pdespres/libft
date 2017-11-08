@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:48:51 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 12:55:10 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:21:17 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ int		ft_memcmp(void *s1, void *s2, size_t n)
 		c2 = cs2[i];
 		i++;
 	}
-	return (c1 - c2)
+	return (c1 - c2);
 }

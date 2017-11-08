@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:49:02 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/07 16:52:42 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:25:40 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ char	*ft_strncat(char *s1, char *s2, size_t n)
 		j++;
 	}
 	s1[i + j] = '\0';
-	return (dest);
+	return (s1);
 }

@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 18:31:43 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/07 18:33:58 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:20:32 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int		ft_isalnum(int c)
 {
-	return (max(ft_isalpha(c), ft_isdigit(c)));
+	return (MAX(ft_isalpha(c), ft_isdigit(c)));
 }

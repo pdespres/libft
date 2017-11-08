@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:26:16 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/07 18:09:17 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:26:47 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ char	*ft_strncpy(char *dst, char *src, size_t len)
 	while (i <= (len - 1))
 	{
 		dst[i] = src[i];
-		if (src[i] = '\0')
+		if (src[i] == '\0')
 		{
 			i++;
-			while (i <= n)
+			while (i <= len)
 			{
 				dst[i] = '\0';
 				i++;

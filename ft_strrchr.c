@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:46:25 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 13:17:21 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:27:38 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strrchr(char *s, int c)
 	if (c < 0 || c > 255)
 		return (NULL);
 	i = ft_strlen(s);
-	while (i >= 0)
+	while (1 == 1)
 	{
 		if (s[i] == c)
 			return (s + i);

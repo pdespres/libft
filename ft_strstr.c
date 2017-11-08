@@ -6,11 +6,11 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:54:29 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/07 17:59:12 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/08 14:49:26 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
 char	*ft_strstr(char *str, char *tofind)
 {
@@ -18,15 +18,15 @@ char	*ft_strstr(char *str, char *tofind)
 	size_t j;
 
 	i = 0;
-	if (to_find[0] == '\0')
+	if (tofind[0] == '\0')
 		return (str);
 	while (str[i] != '\0')
 	{
 		j = 0;
-		while (str[i + j] == to_find[j])
+		while (str[i + j] == tofind[j])
 		{
 			j++;
-			if (to_find[j] == '\0')
+			if (tofind[j] == '\0')
 			{
 				return (str + i);
 			}

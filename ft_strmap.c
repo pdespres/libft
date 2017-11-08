@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 12:20:33 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 14:10:15 by pdespres         ###   ########.fr       */
+/*   Created: 2017/11/08 20:53:00 by pdespres          #+#    #+#             */
+/*   Updated: 2017/11/08 21:10:39 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+char	*ft_strmap(char *s, char (*f)(char))
 {
-	size_t	count;
+	char	*str;
+	size_t	i;
 
-	count = 0;
-	while (str[count] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		count++;
+		f(s[i]);
+		i++;
 	}
-	return (count);
+	return (ft_strdup(s));
 }
