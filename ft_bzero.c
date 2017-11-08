@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 17:46:25 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 13:17:21 by pdespres         ###   ########.fr       */
+/*   Created: 2017/11/08 11:11:17 by pdespres          #+#    #+#             */
+/*   Updated: 2017/11/08 11:14:17 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *s, int c)
+void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-
-	if (c < 0 || c > 255)
-		return (NULL);
-	i = ft_strlen(s);
-	while (i >= 0)
-	{
-		if (s[i] == c)
-			return (s + i);
-		if (i == 0)
-			break ;
-		i--;
-	}
-	return (NULL);
+	ft_memset(s, 0, n)
 }

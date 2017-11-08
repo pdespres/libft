@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 17:46:25 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 13:17:21 by pdespres         ###   ########.fr       */
+/*   Created: 2017/11/08 11:00:55 by pdespres          #+#    #+#             */
+/*   Updated: 2017/11/08 11:02:52 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *s, int c)
+int		ft_tolower(int c)
 {
-	size_t	i;
-
-	if (c < 0 || c > 255)
-		return (NULL);
-	i = ft_strlen(s);
-	while (i >= 0)
-	{
-		if (s[i] == c)
-			return (s + i);
-		if (i == 0)
-			break ;
-		i--;
-	}
-	return (NULL);
+	if (ft_isupper(c) == 0)
+		return (0);
+	return (c - 'A' + 'a');
 }

@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/07 17:46:25 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 13:17:21 by pdespres         ###   ########.fr       */
+/*   Created: 2017/11/08 12:48:51 by pdespres          #+#    #+#             */
+/*   Updated: 2017/11/08 12:55:10 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(char *s, int c)
+int		ft_memcmp(void *s1, void *s2, size_t n)
 {
-	size_t	i;
+	unsigned char	c1;
+	unsigned char	c2;
+	size_t			i;
+	char			*cs1;
+	char			*cs2;
 
-	if (c < 0 || c > 255)
-		return (NULL);
-	i = ft_strlen(s);
-	while (i >= 0)
+	if (n == 0)
+		return (0);
+	i = 0;
+	cs1 = (char*) s1;
+	cs2 = (char*) s2;
+	while (i <= n && c1 == c2)
 	{
-		if (s[i] == c)
-			return (s + i);
-		if (i == 0)
-			break ;
-		i--;
+		c1 = cs1[i];
+		c2 = cs2[i];
+		i++;
 	}
-	return (NULL);
+	return (c1 - c2)
 }
