@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 12:15:10 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/09 12:40:26 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/09 17:26:39 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-
-#include <stdio.h>
 
 # define MAX(a, b) ((a) < (b) ? (b) : (a))
 
@@ -32,8 +30,8 @@ size_t		ft_strlen(const char *s);
 char		*ft_strdup(const char *str);
 char		*ft_strcpy(char *dst, const char *src);
 char		*ft_strncpy(char *dst, char const *src, size_t len);
-char		*ft_strcat(char *s1, char *s2);
-char		*ft_strncat(char *s1, char *s2, size_t n);
+char		*ft_strcat(char *s1, const char *s2);
+char		*ft_strncat(char *s1, const char *s2, size_t n);
 size_t		ft_strlcat(char *dst, char *src, size_t size);
 char		*ft_strchr(char *s, int c);
 char		*ft_strrchr(char *s, int c);
@@ -41,7 +39,7 @@ char		*ft_strstr(char *str, char *tofind);
 char		*ft_strnstr(char *str, char *tofind, size_t len);
 int			ft_strcmp(char const *s1, char const *s2);
 int			ft_strncmp(char const *s1, char const *s2, size_t n);
-int			ft_atoi(char *str);
+int			ft_atoi(const char *str);
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);

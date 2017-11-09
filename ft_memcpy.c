@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 11:16:34 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 12:28:38 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/09 14:40:27 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dst, void *src, size_t n)
 	size_t	i;
 	char	*cdst;
 	char	*csrc;
-	
+
 	if (dst == src)
 		return (dst);
 	cdst = (char*)dst;

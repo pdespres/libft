@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 11:46:18 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 14:23:54 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/09 16:22:13 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,9 @@
 
 static int	ft_overlap(void *dst, void *src, size_t len)
 {
-	if (dst == src)
-		return (3);
-	else if (dst + len >= src)
+	if (dst + len >= src && dst <= src)
 		return (1);
-	else if (src + len >= dst)
+	else if (src + len >= dst && src <= dst)
 		return (2);
 	else
 		return (0);

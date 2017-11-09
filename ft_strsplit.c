@@ -6,13 +6,13 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:56:53 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/09 13:04:29 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/09 15:22:41 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_howmanywords(char *str, char sep)
+static int	ft_howmanywords(char const *str, char sep)
 {
 	int		words;
 	int		i;
@@ -38,7 +38,7 @@ static int	ft_howmanywords(char *str, char sep)
 	return (words);
 }
 
-static int	ft_create_lines(char *str, char **tab, char sep)
+static int	ft_create_lines(char const *str, char **tab, char sep)
 {
 	int		i;
 	int		j;
@@ -67,7 +67,7 @@ static int	ft_create_lines(char *str, char **tab, char sep)
 	return (1);
 }
 
-static int	ft_fill_array(char *str, char **tab, char sep)
+static int	ft_fill_array(char const *str, char **tab, char sep)
 {
 	int		i;
 	int		j;

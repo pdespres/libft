@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:35:20 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 12:48:32 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/09 14:41:49 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ void	*ft_memchr(void *s, int c, size_t n)
 
 	if (n == 0)
 		return (NULL);
-	uc = (unsigned char) c;
-	cs = (char*) s;
+	uc = (unsigned char)c;
+	cs = (char*)s;
 	i = 0;
 	while (i <= n - 1)
 	{

@@ -6,13 +6,13 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 14:08:32 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/09 14:11:23 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/09 20:42:18 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include "libft.h"
+#include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr(ft_itoa(n), fd);
+	ft_putstr_fd(ft_itoa(n), fd);
 }

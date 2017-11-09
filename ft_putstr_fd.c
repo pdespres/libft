@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:49:10 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/09 14:08:09 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/09 14:38:15 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putstr_fd(char const *s, int fd)
 {
-	while(*s)
+	while (*s)
 		ft_putchar_fd(*s++, fd);
 }

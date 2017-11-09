@@ -6,13 +6,14 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:18:44 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/07 17:21:42 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/09 17:54:42 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int		ft_firstnum(char *str)
+static int	ft_firstnum(const char *str)
 {
 	int i;
 
@@ -29,9 +30,9 @@ int		ft_firstnum(char *str)
 		{
 			return (-1);
 		}
-		if (i > 0 && (str[i] == '+' || str[i] == '-'))
+		if ((str[i] == '+' || str[i] == '-'))
 		{
-			if (str[i - 1] == '+' || str[i - 1] == '-')
+			if (!(str[i + 1] >= '0' && str[i + 1] <= '9'))
 			{
 				return (-1);
 			}
@@ -41,9 +42,9 @@ int		ft_firstnum(char *str)
 	return (-1);
 }
 
-int		ft_atoi(char *str)
+int			ft_atoi(const char *str)
 {
-	int		iresultat;
+	long	iresultat;
 	int		i;
 	int		isigne;
 
@@ -62,7 +63,15 @@ int		ft_atoi(char *str)
 	{
 		iresultat = iresultat * 10;
 		iresultat += str[i] - '0';
+		if (iresultat > 2147483648)
+			return (-1 * isigne);
 		i++;
 	}
-	return (iresultat * isigne);
+	return ((int)(iresultat * isigne));
+}
+
+int		main(void)
+{
+	char	tab[40] = "-3000000000";
+	printf("%d\n", atoi(tab));
 }
