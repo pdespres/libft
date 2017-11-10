@@ -6,7 +6,7 @@
 #    By: pdespres <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/09/13 21:46:29 by pdespres          #+#    #+#              #
-#    Updated: 2017/11/09 15:30:04 by pdespres         ###   ########.fr        #
+#    Updated: 2017/11/10 11:26:02 by pdespres         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ SRC = ./*.c
 
 all: $(NAME)
 
-libft.a:
+$(NAME):
 	gcc -Wextra -Wall -Werror -c $(SRC)
 	ar rc $(NAME) *.o
 	ranlib $(NAME)

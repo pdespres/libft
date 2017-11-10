@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:44:08 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/09 15:24:25 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/10 12:23:59 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s)
 	unsigned int	ltrim;
 	size_t			rtrim;
 
+	if (s == NULL)
+		return (NULL);
 	size = ft_strlen(s);
 	ltrim = 0;
 	while ((s[ltrim] == ' ' || s[ltrim] == '\n' || s[ltrim] == '\t')

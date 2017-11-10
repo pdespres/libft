@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 20:17:35 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 20:24:36 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/10 13:10:07 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 void	ft_strdel(char **as)
 {
+	if (as == NULL)
+		return ;
+	if (*as == NULL)
+		return ;
 	free(*as);
 	*as = NULL;
 }

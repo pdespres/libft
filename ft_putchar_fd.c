@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:47:55 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/09 20:04:02 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/10 13:27:30 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
-	write(fd, &c, 1);
+	write(fd, (unsigned char*)&c, 1);
 }

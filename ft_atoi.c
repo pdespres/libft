@@ -6,12 +6,11 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:18:44 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/09 17:54:42 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/10 18:02:03 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_firstnum(const char *str)
 {
@@ -44,17 +43,15 @@ static int	ft_firstnum(const char *str)
 
 int			ft_atoi(const char *str)
 {
-	long	iresultat;
-	int		i;
-	int		isigne;
+	unsigned long long	iresultat;
+	int					i;
+	int					isigne;
 
 	iresultat = 0;
 	isigne = 1;
 	i = ft_firstnum(str);
 	if (i == -1)
-	{
 		return (0);
-	}
 	if (i > 0 && str[i - 1] == '-')
 	{
 		isigne = -1;
@@ -63,15 +60,11 @@ int			ft_atoi(const char *str)
 	{
 		iresultat = iresultat * 10;
 		iresultat += str[i] - '0';
-		if (iresultat > 2147483648)
-			return (-1 * isigne);
+		if (iresultat > (unsigned long long)9223372036854775807 && isigne < 0)
+			return (0);
+		if (iresultat > (unsigned long long)9223372036854775807 && isigne > 0)
+			return (-1);
 		i++;
 	}
 	return ((int)(iresultat * isigne));
-}
-
-int		main(void)
-{
-	char	tab[40] = "-3000000000";
-	printf("%d\n", atoi(tab));
 }

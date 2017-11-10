@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 11:00:55 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/08 11:02:52 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/10 09:31:05 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int		ft_tolower(int c)
 {
 	if (ft_isupper(c) == 0)
-		return (0);
+		return (c);
 	return (c - 'A' + 'a');
 }

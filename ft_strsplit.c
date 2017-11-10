@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 12:56:53 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/09 15:22:41 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/10 12:23:31 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,8 @@ char		**ft_strsplit(char const *str, char c)
 	int		size;
 	char	**tab;
 
+	if (str == NULL)
+		return (NULL);
 	size = ft_howmanywords(str, c);
 	tab = (char**)malloc(sizeof(*tab) * (size + 1));
 	if (tab == NULL)
