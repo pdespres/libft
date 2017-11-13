@@ -6,13 +6,13 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 11:46:18 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/09 16:22:13 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/13 09:23:15 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_overlap(void *dst, void *src, size_t len)
+static int	ft_overlap(void *dst, const void *src, size_t len)
 {
 	if (dst + len >= src && dst <= src)
 		return (1);
@@ -22,7 +22,7 @@ static int	ft_overlap(void *dst, void *src, size_t len)
 		return (0);
 }
 
-void		*ft_memmove(void *dst, void *src, size_t len)
+void		*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 	int		j;
