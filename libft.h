@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 12:15:10 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/13 09:30:14 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/13 13:27:36 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # include <string.h>
 
 # define MAX(a, b) ((a) < (b) ? (b) : (a))
+# define BUF_SIZE 1
+# define BUF_MAX 819200
 
 typedef struct		s_list
 {
@@ -43,7 +45,7 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strstr(const char *str, const char *tofind);
-char				*ft_strnstr(const char *str, const char *tofind, size_t len);
+char				*ft_strnstr(const char *s, const char *tofind, size_t len);
 int					ft_strcmp(char const *s1, char const *s2);
 int					ft_strncmp(char const *s1, char const *s2, size_t n);
 int					ft_atoi(const char *str);
@@ -89,5 +91,9 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 int					ft_islower(int c);
 int					ft_isupper(int c);
+char				*ft_read(int fd);
+char				*ft_convert_base(char *nbr, char *basefrom, char *baseto);
+int					ft_countwords(char const *str, char sep);
+void				ft_freetabmem(char **tab);
 
 #endif

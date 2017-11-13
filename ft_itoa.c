@@ -6,7 +6,7 @@
 /*   By: pdespres <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 13:04:42 by pdespres          #+#    #+#             */
-/*   Updated: 2017/11/10 10:38:45 by pdespres         ###   ########.fr       */
+/*   Updated: 2017/11/13 10:24:01 by pdespres         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ char		*ft_itoa(int n)
 	}
 	cal_rec(a, str, &ind);
 	str[ind] = '\0';
-	return (str);
+	return (ft_strdup(str));
 }
